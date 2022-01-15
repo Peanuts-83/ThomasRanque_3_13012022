@@ -189,39 +189,40 @@ section {
       font-weight: 300;
       font-size: large;
     }
-    .rating {
-      padding: 2% 4%;
-      font-size: x-large;
-      color: var(--grey-medium);
-      position: relative;
+  }
+}
 
-      .fas {
-        display: none;
-        transition: all .5s;
-      }
-      &:hover {
-        .far {display: none;}
-        .fas {
-          display: inline;
-          background: linear-gradient(25deg, transparent 25%, var(--pink) 50%, var(--violet-dark) 100%);
-          /* Set the background size and repeat properties. */
-          background-size: 300%;
-          background-repeat: repeat;
-          animation: fade 1s forwards;
-          /* Use the text as a mask for the background. */
-          /* This will show the gradient as a text color rather than element bg.*/
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -moz-background-clip: text;
-          -moz-text-fill-color: transparent;
+.rating {
+  padding: 2% 4%;
+  font-size: x-large;
+  color: var(--grey-medium);
+  position: relative;
 
-        }
-        @keyframes fade {
-          100% {
-            background-position: right;
-          }
+  .fas {
+    display: none;
+    transition: all .5s;
+  }
 
-        }
+  &:hover {
+    .far {display: none;}
+    .fas {
+      cursor: pointer;
+      display: inline;
+      background: linear-gradient(25deg, transparent 25%, var(--pink) 50%, var(--violet-dark) 100%);
+      /* Set the background size and repeat properties. */
+      background-size: 300%;
+      background-repeat: repeat;
+      animation: fade 1s forwards;
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg.*/
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+    @keyframes fade {
+      100% {
+        background-position: right;
       }
     }
   }

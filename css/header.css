@@ -40,6 +40,10 @@ a {
   color: black;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,17 +69,24 @@ header * {
 }
 
 header .back {
-  display: none;
   position: absolute;
-  top: 10;
+  top: 5px;
   left: 0;
-  font-size: large;
+  font-size: x-large;
   color: var(--grey-dark);
+}
+
+header .back:hover .fa {
+  color: var(--pink);
+}
+
+header .back:active .fa {
+  color: var(--violet-dark);
 }
 
 header .logo img {
   position: relative;
-  margin-left: 15%;
-  width: 60%;
+  margin-left: 22%;
+  width: 50%;
 }
 /*# sourceMappingURL=header.css.map */

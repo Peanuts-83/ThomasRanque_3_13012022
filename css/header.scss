@@ -39,6 +39,9 @@ a {
   color: black;
 }
 
+.hidden {display: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -54,16 +57,21 @@ header {
     padding: 15px 10px 5px 10px;
   }
   .back {
-    display: none;
     position: absolute;
-    top: 10;
+    top: 5px;
     left: 0;
-    font-size: large;
+    font-size: x-large;
     color: var(--grey-dark);
+    &:hover .fa{
+      color: var(--pink);
+    }
+    &:active .fa{
+      color: var(--violet-dark);
+    }
   }
   .logo img {
     position: relative;
-    margin-left: 15%;
-    width: 60%;
+    margin-left: 22%;
+    width: 50%;
   }
 }

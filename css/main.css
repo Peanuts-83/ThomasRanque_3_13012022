@@ -255,24 +255,25 @@ section {
   font-size: large;
 }
 
-.card .card-body .rating {
+.rating {
   padding: 2% 4%;
   font-size: x-large;
   color: var(--grey-medium);
   position: relative;
 }
 
-.card .card-body .rating .fas {
+.rating .fas {
   display: none;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-.card .card-body .rating:hover .far {
+.rating:hover .far {
   display: none;
 }
 
-.card .card-body .rating:hover .fas {
+.rating:hover .fas {
+  cursor: pointer;
   display: inline;
   background: linear-gradient(25deg, transparent 25%, var(--pink) 50%, var(--violet-dark) 100%);
   /* Set the background size and repeat properties. */
