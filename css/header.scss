@@ -7,13 +7,17 @@
   --grey-dark: #353535;
   --pink: #ff79da;
   --violet-light:  #f5edff;
-  --violet-dark: #9356dc;
+  --violet-dark: rgb(147, 86, 220);
   --green-light: #99e2d0;
   --green-dark: #008766;
   font-family: Roboto;
   font-size: medium;
   font-weight: 400;
   color: black;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 h1 {

@@ -7,17 +7,19 @@ footer {
     font-size: large;
     color: white;
   }
+  a {
+    color: white;
+    &:hover {
+      color: var(--pink);
+    }
+    &:active {
+      color: var(--violet-dark);
+    }
+  }
   ul {
     padding-left: 0;
     line-height: 30px;
     list-style: none;
-    li {
-      font-size: large;
-
-      &:nth-child(1), &:nth-child(2) {
-        font-weight: 600;
-      }
-    }
   }
   i {
     margin-right: 5px;

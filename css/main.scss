@@ -5,7 +5,11 @@ main {
 
 /* SHADOWS */
 .btn, .card {
-  box-shadow: 2px 5px 8px 0px var(--grey-light3);
+  box-shadow: 2px 5px 8px 0px var(--grey-light2);
+  &:hover {
+    box-shadow: 2px 5px 8px 0px var(--grey-light3);
+
+  }
 }
 
 
@@ -14,15 +18,15 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 20px;
+  width: auto;
 }
 
 .position {
   text-align: center;
   font-size: large;
   font-weight: 600;
-  padding: 14px;
-  width: 100vw;
+  padding: 16px 0;
+  width: 100%;
   color: var(--grey-dark);
   background: var(--grey-light2);
   * {
@@ -35,8 +39,8 @@ aside {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 15%;
-  width: 100vw;
+  padding: 15% 0;
+  width: 100%;
   background: var(--grey-light1);
   h1 {
     margin: 0 10%;
@@ -70,8 +74,14 @@ aside {
 }
 
 .btn_fadepink {
-  color: white;
+  color: var(--violet-light);
   background: linear-gradient(167deg, var(--pink), var(--violet-dark));
+  box-shadow: 2px 5px 8px 0px var(--grey-light3);
+  &:hover {
+    color: white;
+    text-shadow: 1px 1px 3px var(--grey-dark);
+    box-shadow: 2px 5px 8px 0px var(--grey-medium);
+  }
 }
 
 .btn_shrink {
@@ -91,7 +101,7 @@ aside {
 }
 
 .btn_light {
-  background: var(--violet-light);
+  background: var(--grey-light1);
   counter-increment: step-counter;
   .btn_ico {
     position: relative;
@@ -101,6 +111,12 @@ aside {
   .btn_txt {
     position: relative;
     left: 10%;
+  }
+  &:hover {
+    background: var(--violet-light);
+    .btn_ico {
+      color: var(--violet-dark);
+    }
   }
 }
 
@@ -116,17 +132,29 @@ aside {
 
 /* SECTION */
 section {
-  padding: 7%;
+  padding: 7% 7% 20% 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
   background: var(--grey-light1);
+
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 5%;
+  border-radius: 15px;
   background: white;
   width: 100%;
   height: 250px;
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(1);
+  }
   .card-image {
     position: relative;
     display: flex;
@@ -138,14 +166,13 @@ section {
       top: 10%;
       right: 5%;
       padding: 2% 3%;
-      border-radius: 5%;
+      border-radius: 3px;
       font-weight: 600;
       color: var(--green-dark);
       background: var(--green-light);
     }
     img {
-      bottom: 0px;
-      border-radius: 5% 5% 0 0;
+      border-radius: 15px 15px 0 0;
       width: 100%;
     }
   }
@@ -166,6 +193,36 @@ section {
       padding: 2% 4%;
       font-size: x-large;
       color: var(--grey-medium);
+      position: relative;
+
+      .fas {
+        display: none;
+        transition: all .5s;
+      }
+      &:hover {
+        .far {display: none;}
+        .fas {
+          display: inline;
+          background: linear-gradient(25deg, transparent 25%, var(--pink) 50%, var(--violet-dark) 100%);
+          /* Set the background size and repeat properties. */
+          background-size: 300%;
+          background-repeat: repeat;
+          animation: fade 1s forwards;
+          /* Use the text as a mask for the background. */
+          /* This will show the gradient as a text color rather than element bg.*/
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+
+        }
+        @keyframes fade {
+          100% {
+            background-position: right;
+          }
+
+        }
+      }
     }
   }
 }

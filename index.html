@@ -17,6 +17,7 @@
 
   <!--Styles management-->
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/spinner.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/footer.css">
@@ -26,12 +27,22 @@
 
 
 <body>
+
   <header>
     <span class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
     <span class="logo"><img src="./images/logo/ohmyfood.png" alt="logo ohmyfood"></span>
   </header>
 
   <main>
+
+    <div class="loader">
+      <p>Loading data</p>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
 
     <aside>
       <div class="position">
@@ -41,7 +52,9 @@
       <div class="suggestion">
         <h1>Réservez le menu qui vous convient</h1>
         <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
-        <div class="btn btn_fadepink btn_shrink">Explorer nos restaurants</div>
+        <a href="#restaurants">
+          <div class="btn btn_fadepink btn_shrink">Explorer nos restaurants</div>
+        </a>
       </div>
 
       <div class="fonctionnement">
@@ -63,20 +76,80 @@
       </div>
     </aside>
 
-    <section>
+    <section id="restaurants">
       <h1>Restaurants</h1>
       <a href="#">
         <div class="card">
           <div class="card-image">
             <div class="new">Nouveau</div>
-            <img src="./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+            <img src="./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg" srcset="./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg 600w,
+            ./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg 1000w,
+            ./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg 2000w,
+            ./images/restaurants/1_small/jay-wennington-N_Y88TWmGwA-unsplash.jpg 4000w" sizes="100vw"
+              alt="photo restaurant">
           </div>
           <div class="card-body">
             <div class="card-text">
               <div class="card-title">La palette du goût</div>
               <p>Ménilmontant</p>
             </div>
-            <div class="rating"><i class="far fa-heart"></i></div>
+            <div class="rating">
+              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="card">
+          <div class="card-image">
+            <div class="new">Nouveau</div>
+            <img src="./images/restaurants/1_small/stil-u2Lp8tXIcjw-unsplash.jpg" srcset="./images/restaurants/1_small/stil-u2Lp8tXIcjw-unsplash.jpg 600w,
+            ./images/restaurants/1_small/stil-u2Lp8tXIcjw-unsplash.jpg 1000w,
+            ./images/restaurants/1_small/stil-u2Lp8tXIcjw-unsplash.jpg 2000w,
+            ./images/restaurants/1_small/stil-u2Lp8tXIcjw-unsplash.jpg 4000w" sizes="100vw" alt="photo restaurant">
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="card-title">La note enchantée</div>
+              <p>Charonne</p>
+            </div>
+            <div class="rating"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="card">
+          <div class="card-image">
+            <img src="./images/restaurants/1_small/toa-heftiba-DQKerTsQwi0-unsplash.jpg" srcset="./images/restaurants/1_small/toa-heftiba-DQKerTsQwi0-unsplash.jpg 600w,
+            ./images/restaurants/1_small/toa-heftiba-DQKerTsQwi0-unsplash.jpg 1000w,
+            ./images/restaurants/1_small/toa-heftiba-DQKerTsQwi0-unsplash.jpg 2000w,
+            ./images/restaurants/1_small/toa-heftiba-DQKerTsQwi0-unsplash.jpg 4000w" sizes="100vw"
+              alt="photo restaurant">
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="card-title">À la française</div>
+              <p>Cité Rouge</p>
+            </div>
+            <div class="rating"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="card">
+          <div class="card-image">
+            <img src="./images/restaurants/1_small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" srcset="./images/restaurants/1_small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg 600w,
+            ./images/restaurants/1_small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg 1000w,
+            ./images/restaurants/1_small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg 2000w,
+            ./images/restaurants/1_small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg 4000w" sizes="100vw"
+              alt="photo restaurant">
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="card-title">Le délice des sens</div>
+              <p>Folie-Méricourt</p>
+            </div>
+            <div class="rating"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
           </div>
         </div>
       </a>
@@ -85,10 +158,18 @@
     <footer>
       <p>ohmyfood</p>
       <ul>
-        <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-        <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+        <a href="#">
+          <li><i class="fas fa-utensils"></i><strong> Proposer un restaurant</strong></li>
+        </a>
+        <a href="#">
+          <li><i class="fas fa-hands-helping"></i><strong> Devenir partenaire</strong></li>
+        </a>
+        <a href="#">
+          <li>Mentions légales</li>
+        </a>
+        <a href="mailto:info@ohmyfood.com">
+          <li>Contact</li>
+        </a>
       </ul>
     </footer>
 
