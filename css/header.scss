@@ -63,10 +63,10 @@ header {
     font-size: x-large;
     color: var(--grey-dark);
     &:hover .fa{
-      color: var(--pink);
+      color: var(--violet-dark);
     }
     &:active .fa{
-      color: var(--violet-dark);
+      color: var(--pink);
     }
   }
   .logo img {

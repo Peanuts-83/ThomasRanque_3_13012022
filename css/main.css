@@ -1,6 +1,6 @@
 main {
-  position: relative;
-  top: 80px;
+  padding-top: 80px;
+  margin: 0;
 }
 
 /* SHADOWS */
@@ -26,7 +26,6 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
 }
 
 .position {
@@ -82,16 +81,12 @@ aside {
           flex-direction: column;
   width: 85vw;
   margin: 7%;
-}
-
-.fonctionnement .btn {
-  margin: 7% 0;
-  padding: 30px 0;
+  padding-bottom: 5%;
 }
 
 /* BTN */
 .btn {
-  padding: 20px;
+  padding: 20px 60px;
   border-radius: 30px;
   font-size: large;
   font-weight: 600;
@@ -106,7 +101,6 @@ aside {
 
 .btn_fadepink:hover {
   color: white;
-  text-shadow: 1px 1px 3px var(--grey-dark);
   -webkit-box-shadow: 2px 5px 8px 0px var(--grey-medium);
           box-shadow: 2px 5px 8px 0px var(--grey-medium);
 }
@@ -127,6 +121,8 @@ aside {
 .fonctionnement .btn {
   position: relative;
   left: 2%;
+  margin: 20px 0;
+  padding: 30px 0;
 }
 
 .btn_light {
@@ -164,7 +160,7 @@ aside {
 
 /* SECTION */
 section {
-  padding: 7% 7% 20% 7%;
+  padding: 20px 20px 60px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,11 +168,13 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 20px;
   background: var(--grey-light1);
+  height: 100%;
+  margin: 0;
 }
 
 .card {
@@ -222,7 +220,7 @@ section {
   position: absolute;
   top: 10%;
   right: 5%;
-  padding: 2% 3%;
+  padding: 5px 10px;
   border-radius: 3px;
   font-weight: 600;
   color: var(--green-dark);
@@ -241,7 +239,8 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5%;
+  height: 20%;
+  margin: 10px;
 }
 
 .card .card-body .card-title {
@@ -256,7 +255,7 @@ section {
 }
 
 .rating {
-  padding: 2% 4%;
+  padding: 5px 10px;
   font-size: x-large;
   color: var(--grey-medium);
   position: relative;
@@ -287,6 +286,7 @@ section {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @-webkit-keyframes fade {
@@ -298,6 +298,77 @@ section {
 @keyframes fade {
   100% {
     background-position: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 15px;
+    background: white;
+    width: 100%;
+    height: 250px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  .card:active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .card .card-image {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
+    overflow: hidden;
+  }
+  .card .card-image .new {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--green-dark);
+    background: var(--green-light);
+  }
+  .card .card-image img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+  }
+  .card .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 20%;
+    margin: 10px;
+  }
+  .card .card-body .card-title {
+    font-size: large;
+    font-weight: 600;
+  }
+  .card .card-body p {
+    line-height: 0;
+    font-weight: 300;
+    font-size: large;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -77,11 +77,11 @@ header .back {
 }
 
 header .back:hover .fa {
-  color: var(--pink);
+  color: var(--violet-dark);
 }
 
 header .back:active .fa {
-  color: var(--violet-dark);
+  color: var(--pink);
 }
 
 header .logo img {

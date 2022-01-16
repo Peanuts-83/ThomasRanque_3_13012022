@@ -1,5 +1,5 @@
 footer {
-  padding: 7%;
+  padding: 20px;
   color: white;
   background: var(--grey-dark);
   p {
@@ -10,10 +10,10 @@ footer {
   a {
     color: white;
     &:hover {
-      color: var(--pink);
+      color: var(--violet-dark);
     }
     &:active {
-      color: var(--violet-dark);
+      color: var(--pink);
     }
   }
   ul {
@@ -23,5 +23,13 @@ footer {
   }
   i {
     margin-right: 5px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
   }
 }
