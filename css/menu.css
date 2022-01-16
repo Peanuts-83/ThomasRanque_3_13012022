@@ -23,9 +23,10 @@ main {
 
 .menu .image {
   position: relative;
-  top: 60px;
+  top: 70px;
   width: 100%;
-  max-height: 300px;
+  height: 30vh;
+  max-height: 60vw;
   overflow: hidden;
 }
 
@@ -286,7 +287,6 @@ main {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    border-radius: 3vw;
     gap: 2%;
   }
   .menu-section .menu-title {
@@ -314,7 +314,7 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .menu-section .menu-title {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -326,6 +326,10 @@ main {
   .menu-section .menu-title .rating {
     font-size: calc(1.7 * 2vw);
     margin: 3vw;
+  }
+  .menu .image {
+    height: 40vw;
+    max-height: 40vw;
   }
 }
 /*# sourceMappingURL=menu.css.map */

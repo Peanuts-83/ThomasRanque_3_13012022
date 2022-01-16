@@ -38,14 +38,14 @@ aside {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 15% 0;
+  padding: 60px 0;
   width: 100%;
   background: var(--grey-light1);
   h1 {
-    margin: 0 10%;
+    margin: 0 30px;
   }
   h2 {
-    margin: 5%;
+    margin: 20px;
   }
   .btn {
     margin-top: 5%;
@@ -55,9 +55,8 @@ aside {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  width: 85vw;
-  margin: 7%;
-  padding-bottom: 5%;
+  width: 85%;
+  padding: 5% 0;
 }
 
 
@@ -129,7 +128,7 @@ aside {
 
 
 /* SECTION */
-section {
+.restaurants {
   padding: 20px 20px 60px 20px;
   display: flex;
   flex-direction: column;
@@ -227,56 +226,29 @@ section {
   }
 }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 769px) {
+  .fonctionnement h1 {
+    text-align: center;
+  }
+
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    h1 {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
   .card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    background: white;
-    width: 100%;
-    height: 250px;
-    transition: all .3s;
-    &:hover {
-      transform: scale(1.02);
-    }
-    &:active {
-      transform: scale(1);
-    }
-    .card-image {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 80%;
-      overflow: hidden;
-      .new {
-        position: absolute;
-        top: 10%;
-        right: 5%;
-        padding: 5px 10px;
-        border-radius: 3px;
-        font-weight: 600;
-        color: var(--green-dark);
-        background: var(--green-light);
-      }
-      img {
-        border-radius: 15px 15px 0 0;
-        width: 100%;
-      }
-    }
-    .card-body {
-      display: flex;
-      justify-content:space-between;
-      height: 20%;
-      margin: 10px;
-      .card-title {
-        font-size: large;
-        font-weight: 600;
-      }
-      p {
-        line-height: 0;
-        font-weight: 300;
-        font-size: large;
-      }
-    }
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 20vw;
   }
 }
