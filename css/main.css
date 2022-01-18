@@ -1,8 +1,3 @@
-main {
-  padding-top: 80px;
-  margin: 0;
-}
-
 /* SHADOWS */
 .btn, .card {
   -webkit-box-shadow: 2px 5px 8px 0px var(--grey-light2);

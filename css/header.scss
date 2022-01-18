@@ -47,12 +47,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   width: 100vw;
-  top: 0;
-  left: 0;
-  box-shadow: 0 3px 3px 1px var(--grey-light3);
-  z-index: 1;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 3px 8px var(--grey-light3);
   background: white;
   * {
     padding: 15px 10px 5px 10px;

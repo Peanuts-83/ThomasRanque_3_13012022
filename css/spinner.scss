@@ -1,3 +1,19 @@
+/* hide content during loading */
+main, footer {
+  transform: translateY(-9999px);
+  height: 0;
+  opacity: 0;
+  animation: showMain .1s ease-in 3s forwards;
+}
+
+@keyframes showMain {
+  100% {
+    transform: translateY(0);
+    height: auto;
+    opacity: 1;
+  }
+}
+
 .loader {
   display: flex;
   flex-direction: column;
@@ -5,9 +21,9 @@
   align-items: center;
   --violet-spinner: rgba(147,86,220,.3);
   position: absolute;
-  z-index: 3;
   width: 100%;
   height: 100vh;
+  z-index: 1;
   background: var(--grey-light2);
   animation: hideSpinner .5s ease-in 3s forwards;
   p {
@@ -19,7 +35,7 @@
   }
   .fa-cheeseburger {
     position: relative;
-    animation: jump 1s  .1s infinite  ;
+    animation: jump 1s  .1s infinite;
   }
   .fa-salad {
     position: relative;
@@ -31,7 +47,6 @@
 }
 
 .loader div {
-box-sizing: border-box;
 display: block;
 position: absolute;
 width: 200px;
