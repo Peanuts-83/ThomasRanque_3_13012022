@@ -1,5 +1,3 @@
-
-
 .loader {
   display: flex;
   flex-direction: column;
@@ -7,14 +5,30 @@
   align-items: center;
   --violet-spinner: rgba(147,86,220,.3);
   padding: auto;
-  position: relative;
-  top: -100px;
+  position: absolute;
+  z-index: 3;
   width: 100%;
   height: 100vh;
+  background: var(--grey-light2);
+  animation: hideSpinner .5s ease-in 3s forwards;
+  p {
   font-family: Shrikhand;
-  line-height: .2;
-  animation: hideSpinner 0s ease-in 3s forwards;
-  animation-fill-mode: forwards;
+  line-height: 0;
+  }
+  .fad {
+    font-size: xx-large;
+  }
+  .fa-cheeseburger {
+    position: relative;
+    animation: jump 1s  .1s infinite  ;
+  }
+  .fa-salad {
+    position: relative;
+    animation: jump 1.3s .3s infinite;
+  }
+  .fa-steak {
+    animation: jump .7s .2s infinite;
+  }
 }
 
 .loader div {
@@ -41,18 +55,39 @@ animation-delay: -0.15s;
 
 
 @keyframes loader {
-0% {
-transform: rotate(0deg);
+  0% {
+  transform: rotate(0deg);
+  }
+  100% {
+  transform: rotate(360deg);
+  }
 }
-100% {
-transform: rotate(360deg);
-}
+
+@keyframes jump {
+  0% {
+    top: 10px;
+  }
+  30% {
+    top: -15px;
+  }
+  50% {
+    top: 10px;
+  }
+  80% {
+    top: -5px;
+  }
 }
 
 @keyframes hideSpinner {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
   100% {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+    opacity: 0;
+    display: none;
+    top: -100%;
   }
 }
