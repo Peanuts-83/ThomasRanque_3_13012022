@@ -54,7 +54,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 2;
   -webkit-box-shadow: 0 3px 8px var(--grey-light3);
