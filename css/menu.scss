@@ -1,3 +1,4 @@
+/* NO BOXSHADDOW ON HEADER FOR MENU PAGES */
 header {
   box-shadow: none;
 }
@@ -73,7 +74,6 @@ header {
     opacity: 0;
     animation: dishLanding calc(var(--child) * .3s) ease-out .5s forwards;
     /* name duration timingFunction delay iteration direction fillMode playState*/
-
   }
   .btn-menu:hover {
     box-shadow: 2px 5px 8px 0px var(--grey-light3);
@@ -98,7 +98,7 @@ header {
 }
 
 
-/* BOUTONS btn_menu */
+/* MENU BTN */
 .btn-menu {
   display: flex;
   flex-wrap: nowrap;

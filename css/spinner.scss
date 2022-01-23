@@ -1,11 +1,11 @@
-/* hide content during loading */
+/* HIDE CONTENT DURING LOADING */
 main, footer {
   transform: translateY(-9999px);
   height: 0;
   opacity: 0;
   animation: showMain .1s ease-in 3s forwards;
 }
-
+/* SHOW MAIN ANIMATION */
 @keyframes showMain {
   100% {
     transform: translateY(0);
@@ -14,6 +14,7 @@ main, footer {
   }
 }
 
+/* GLOBAL LOADER */
 .loader {
   display: flex;
   flex-direction: column;
@@ -47,6 +48,7 @@ main, footer {
   }
 }
 
+/* SPINNER */
 .loader div {
 display: block;
 position: absolute;

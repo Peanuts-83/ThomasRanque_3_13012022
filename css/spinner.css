@@ -1,4 +1,4 @@
-/* hide content during loading */
+/* HIDE CONTENT DURING LOADING */
 main, footer {
   -webkit-transform: translateY(-9999px);
           transform: translateY(-9999px);
@@ -8,6 +8,7 @@ main, footer {
           animation: showMain .1s ease-in 3s forwards;
 }
 
+/* SHOW MAIN ANIMATION */
 @-webkit-keyframes showMain {
   100% {
     -webkit-transform: translateY(0);
@@ -16,7 +17,6 @@ main, footer {
     opacity: 1;
   }
 }
-
 @keyframes showMain {
   100% {
     -webkit-transform: translateY(0);
@@ -26,6 +26,7 @@ main, footer {
   }
 }
 
+/* GLOBAL LOADER */
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,6 +78,7 @@ main, footer {
           animation: jump .7s .2s infinite;
 }
 
+/* SPINNER */
 .loader div {
   display: block;
   position: absolute;
