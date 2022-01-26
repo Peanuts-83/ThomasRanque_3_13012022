@@ -41,4 +41,10 @@ footer i {
         justify-content: space-around;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 20px 0;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

@@ -170,28 +170,28 @@ header {
 }
 
 
-@media screen and (min-width: 1200px) {
-  .menu-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:flex-end;
-    gap: 2%;
-  }
-
+@media screen and (min-width: 769px) {
   .menu-section .menu-title {
-    align-items: baseline;
-    width: 100%;
-    padding: 3%;
+    justify-content: flex-start;
+    h1 {
+      font-size: 2.5em;
+    }
     .rating {
-      margin: 3vh;
+      font-size: 3em;
+      margin: 3vw;
     }
   }
 
-  .section-dishes {
-    width: 22%;
+  .menu {
+    .image {
+      height: 40vw;
+      max-height: 500px;
+    }
   }
 
+}
+
+@media screen and (min-width: 1200px) {
   .btn-menu {
     width: 100%;
   }
@@ -200,27 +200,6 @@ header {
     align-self: center;
     width: 100%;
     margin-bottom: 10vh;
-  }
-
-}
-
-@media screen and (min-width: 769px) {
-  .menu-section .menu-title {
-    justify-content: flex-start;
-    h1 {
-      font-size: calc(1.7 * 2vw);
-    }
-    .rating {
-      font-size: calc(1.7 * 2vw);
-      margin: 3vw;
-    }
-  }
-
-  .menu {
-    .image {
-      height: 40vw;
-      max-height: 40vw;
-    }
   }
 
 }
