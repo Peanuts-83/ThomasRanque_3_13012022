@@ -1,7 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://developer.mozilla.org/fr/docs/Glossary/HTML5)
 [![forthebadge](./uses-sass.svg)](https://sass-lang.com/)
 
-# P2: HTML & CSS / Booki website
+# P3: HTML, SASS & CSS animation / Ohmyfood website
 
 [![Visit website](./vignette.png)](https://peanuts-83.github.io/ThomasRanque_3_13012022/)
 [![Project's presentation SlideShow](./pdf.png)](Slide_P3.pdf)
